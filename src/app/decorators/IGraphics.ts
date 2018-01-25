@@ -1,0 +1,45 @@
+/**
+ * Copyright 2016 Jim Armstrong (www.algorithmist.net)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * Minimal methods that must be implemented by a (Canvas) Graphics context
+ *
+ * @author Jim Armstrong (www.algorithmist.net)
+ *
+ * @version 1.0
+ */
+export interface IGraphics
+{
+  clear(): void;
+
+  moveTo(x: number, y: number): void;
+
+  lineTo(x: number, y: number): void;
+
+  curveTo(cx: number, cy: number, x1: number, y1: number): void;
+
+  drawCircle(x: number, y: number, r: number): void;
+
+  endStroke(): void;
+
+  setStrokeStyle( stroke: any, caps?: any, joints?: any, mitreLimit?: any, ignoreScale?: boolean): void;
+
+  beginStroke(color: string): void;
+
+  beginFill(color: string): void;
+
+  endFill(): void;
+}
