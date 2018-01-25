@@ -118,7 +118,7 @@ this._graph.draw();
 
 Note that in this application, the coordinate data was first scanned for minimum and maximum extent.  These extents were used to bound the graph area so that no data in any graph layer was rendered outside the axis box.  
 
-Clipping could be applied if you wish to build a more general engine.  For dot-only layers, this involves not displaying dots that are outside the current graph area.  Since 'function' layers are drawn with line segments, clipping requires only simple, linear interpolation.  
+Clipping could be applied if you wish to build a more general engine.  For dot-only layers, this involves not displaying dots that are outside the current graph area.  Since 'function' layers are drawn with line segments, clipping requires only simple, linear interpolation.  (or, you could apply masking to the individual graph layers for a quick solution that is dependent on drawing environment)
 
 
 ## Build and run the demo
